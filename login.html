@@ -1,0 +1,18 @@
+<script>
+  function checkLogin(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("Username").value;
+    const password = document.getElementById("password").value;
+
+    // Yahan apna username aur password set karein
+    const correctUsername = "MyfirstProjecT";       // <-- Aapka naam
+    const correctPassword = "MyfiRstpRoject@htmL";       // <-- Aapka password
+
+    if (username === correctUsername && password === correctPassword) {
+      alert("Login successful!");
+      // window.location.href = "welcome.html";
+    } else {
+      alert("Invalid username or password.");
+    }
+</script>
