@@ -1,18 +1,48 @@
-<script>
-  function checkLogin(event) {
-    event.preventDefault();
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+  <h2>Login</h2>
+  
+  <!-- Login Form -->
+  <form onsubmit="checkLogin(event)">
+    <label for="Username">Username:</label>
+    <input type="text" id="Username" required>
+    <br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <br><br>
+    
+    <button type="submit">Login</button>
+  </form>
 
-    const username = document.getElementById("Username").value;
-    const password = document.getElementById("password").value;
+  <!-- JavaScript -->
+  <script>
+    function checkLogin(event) {
+      event.preventDefault();  // Prevent form submission
 
-    // Yahan apna username aur password set karein
-    const correctUsername = "MyfirstProjecT";       // <-- Aapka naam
-    const correctPassword = "MyfiRstpRoject@htmL";       // <-- Aapka password
+      const username = document.getElementById("Username").value;
+      const password = document.getElementById("password").value;
 
-    if (username === correctUsername && password === correctPassword) {
-      alert("Login successful!");
-      // window.location.href = "welcome.html";
-    } else {
-      alert("Invalid username or password.");
+      // Correct Username and Password
+      const correctUsername = "MyfirstProjecT";       // Set your username
+      const correctPassword = "MyfiRstpRoject@htmL";  // Set your password
+
+      // Check username and password
+if (username === correctUsername && password === correctPassword) {
+        alert("Login successful!");
+        window.location.href = "welcome.html";  // Redirect to welcome page
+      } else {
+        alert("Invalid username or password.");
+      }
     }
-</script>
+  </script>
+
+</body>
+</html>
